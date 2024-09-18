@@ -1,7 +1,3 @@
-Hier ist die aktualisierte `README.md`, die deine neuen Änderungen berücksichtigt, insbesondere die Verwendung von statischen Daten in der Produktion und `json-server` in der Entwicklung:
-
----
-
 # E-Commerce Site
 
 Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese Anwendung bietet grundlegende E-Commerce-Funktionen wie Produktlisten, Warenkorb, Checkout und Zahlungsabwicklung.
@@ -10,7 +6,7 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
 
 - **Produktliste:**
   - Im **Entwicklungsmodus** werden Produkte über den lokalen `json-server` abgerufen.
-  - Im **Produktionsmodus** werden statische Daten verwendet, damit die Seite nach dem Deployment (z.B. auf GitHub Pages) funktioniert.
+  - Im **Produktionsmodus** werden statische Daten verwendet, damit die Seite nach dem Deployment (z.B. auf Vercel) funktioniert.
 - **Warenkorb:** Ermöglicht das Hinzufügen, Entfernen und Aktualisieren der Produktmenge im Warenkorb.
 - **Checkout-Seite:** Zeigt die Produkte im Warenkorb an, berechnet die Gesamtsumme und ermöglicht die Bezahlung.
 - **Zahlung:** Simulation einer erfolgreichen Zahlung mit der Möglichkeit, den Warenkorb nach der Bezahlung zu leeren.
@@ -27,7 +23,6 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
 
 ## Live-Demo
 
-- [GitHub Pages](https://salimov333.github.io/e-commerce-site)
 - [Vercel](https://e-commerce-site-ebon.vercel.app/)
 
 ## Installation
@@ -71,7 +66,7 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
   - Produkte werden dynamisch von `json-server` abgerufen.
 
 - **Produktionsumgebung:**
-  - Beim Deployment (z.B. auf GitHub Pages) werden statische Produktdaten verwendet, damit die Anwendung auch ohne Backend funktioniert.
+  - Beim Deployment (z.B. auf Vercel) werden statische Produktdaten verwendet, damit die Anwendung auch ohne Backend funktioniert.
   - Die statischen Daten befinden sich direkt im Code und werden bei der Erstellung der Anwendung eingebunden.
 
 ## Verwendung
@@ -79,16 +74,6 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
 - **Produkte:** Gehe zur Startseite, um die verfügbaren Produkte zu sehen und sie dem Warenkorb hinzuzufügen.
 - **Warenkorb:** Navigiere zur Warenkorb-Seite, um die hinzugefügten Produkte zu sehen oder sie zu entfernen.
 - **Checkout:** Gehe zur Checkout-Seite, um die Gesamtsumme anzuzeigen, die Menge der Produkte zu ändern und die Bezahlung abzuschließen.
-
-## Deployment auf GitHub Pages
-
-Die Anwendung wird auf GitHub Pages veröffentlicht. Für das Deployment kannst du folgendes Skript verwenden:
-
-```bash
-npm run publish
-```
-
-Dies wird das Projekt in den `dist`-Ordner bauen und den Inhalt auf GitHub Pages bereitstellen.
 
 ## Autoren
 
