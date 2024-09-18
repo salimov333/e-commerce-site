@@ -16,6 +16,7 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
 - **Vite:** Ein schneller Build-Tool für moderne Webprojekte.
 - **Zustand:** Zustand-Management für React-Anwendungen.
 - **Tailwind CSS:** Utility-first CSS-Framework für schnelles Styling.
+- **Axios:** Promis-basierte HTTP-Client-Bibliothek für das Abrufen von Daten.
 - **JSON Server:** Einfacher Weg, eine REST API für Testdaten bereitzustellen.
 
 ## Live-Demo
@@ -59,7 +60,7 @@ Eine Live-Demo der Anwendung ist auf [GitHub Pages](https://salimov333.github.io
 
 ## Autoren
 
-- **Salem Helwani** - [Dein GitHub-Profil](https://github.com/salimov333)
+- **Salem Helwani** - [GitHub-Profil](https://github.com/salimov333)
 
 ## Danksagungen
 
@@ -67,4 +68,5 @@ Eine Live-Demo der Anwendung ist auf [GitHub Pages](https://salimov333.github.io
 - [Vite](https://vitejs.dev/)
 - [Zustand](https://github.com/pmndrs/zustand)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/)
 - [JSON Server](https://github.com/typicode/json-server)
