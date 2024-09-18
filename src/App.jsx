@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound";
 
 // Prüfe die Umgebung, um den richtigen Router auszuwählen
 const Router =
-  process.env.REACT_APP_ENV === "github" ? HashRouter : BrowserRouter;
+import.meta.env.REACT_APP_ENV === "github" ? HashRouter : BrowserRouter;
 
 function App() {
   return (
