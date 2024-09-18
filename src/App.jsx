@@ -1,11 +1,15 @@
 import "./App.css";
 
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductList from "./pages/ProductList";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
+
+// Prüfe die Umgebung, um den richtigen Router auszuwählen
+const Router =
+  process.env.REACT_APP_ENV === "github" ? HashRouter : BrowserRouter;
 
 function App() {
   return (

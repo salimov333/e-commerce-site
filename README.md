@@ -27,7 +27,9 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
 
 ## Live-Demo
 
-Eine Live-Demo der Anwendung wird auf [GitHub Pages](https://salimov333.github.io/e-commerce-site) bereitgestellt.
+Eine Live-Demo der Anwendung wird auf
+- [GitHub Pages](https://salimov333.github.io/e-commerce-site) bereitgestellt.
+- [Vercel](https://e-commerce-site-ebon.vercel.app/)
 
 ## Installation
 
