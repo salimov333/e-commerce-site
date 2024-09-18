@@ -44,18 +44,19 @@ const Checkout = () => {
                 className="flex justify-between flex-wrap p-4 border border-black rounded-lg shadow-lg shadow-slate-600"
               >
                 <span>
-                  {product.name} - {product.price} € x {product.quantity || 1}
+                  {product.name} - {product.price} € x
+                  <b className="text-orange-500 text-base"> {product.quantity || 1}</b>
                 </span>
                 <div className="">
                   <button
                     onClick={() => decreaseQuantity(product.id)}
-                    className="bg-red-500 text-white px-2 py-0 rounded mr-2 hover:bg-red-700"
+                    className="bg-red-500 text-white px-4 py-1 rounded mr-2 hover:bg-red-700"
                   >
                     -
                   </button>
                   <button
                     onClick={() => addToCart(product)}
-                    className="bg-green-500 text-white px-2 py-0 rounded hover:bg-green-700"
+                    className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-700"
                   >
                     +
                   </button>

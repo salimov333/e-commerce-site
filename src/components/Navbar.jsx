@@ -8,7 +8,7 @@ const Navbar = () => {
 
   // Berechne die Gesamtanzahl der Produkte im Warenkorb
   useEffect(() => {
-    console.log("Aktueller Warenkorb:", cart); // Debug: Zeige den aktuellen Warenkorb
+    // console.log("Aktueller Warenkorb:", cart); // Debug: Zeige den aktuellen Warenkorb
     const totalItems = cart.reduce(
       (sum, item) => sum + (item.quantity || 0),
       0
