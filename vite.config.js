@@ -6,5 +6,6 @@ export default defineConfig(({ mode }) => {
   console.log("mode", mode);
   return {
     plugins: [react()],
+    base: '/'
   }
 })
