@@ -45,7 +45,7 @@ const Checkout = () => {
               >
                 <span>
                   {product.name} - {product.price} € x
-                  <b className="text-orange-500 text-base"> {product.quantity || 1}</b>
+                  <b className="text-amber-600 text-base"> {product.quantity || 1}</b>
                 </span>
                 <div className="">
                   <button
@@ -67,7 +67,7 @@ const Checkout = () => {
           {/* Anzeige der Gesamtsumme */}
           <div className="mt-8">
             <p className="text-xl font-semibold">
-              Gesamtsumme: {totalPrice.toFixed(2)} €
+              Gesamtsumme: <strong className="text-2xl text-amber-600">{totalPrice.toFixed(2)}</strong> €
             </p>
           </div>
           <button
