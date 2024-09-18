@@ -23,7 +23,7 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
 
 ## Live-Demo
 
-- [Vercel](https://e-commerce-site-ebon.vercel.app/)
+- [Vercel](https://e-commerce-site-ivory.vercel.app/)
 
 ## Installation
 
