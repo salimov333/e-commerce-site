@@ -2,57 +2,51 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import useCartStore from "../store/cartStore";
 
+// Statische Daten für die Produktion
+const staticProducts = [
+  { id: 1, name: "Produkt 1", price: 10 },
+  { id: 2, name: "Produkt 2", price: 15 },
+  { id: 3, name: "Produkt 3", price: 20 },
+  { id: 4, name: "Produkt 4", price: 30 },
+  { id: 5, name: "Produkt 5", price: 35 },
+  { id: 6, name: "Produkt 6", price: 50 },
+];
+
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const { addToCart } = useCartStore();
 
-  //statische Daten (zum Testen):
-  // useEffect(() => {
-  //   const fakeProducts = [
-  //     { id: 1, name: "Produkt 1", price: 10 },
-  //     { id: 2, name: "Produkt 2", price: 15 },
-  //     { id: 3, name: "Produkt 3", price: 20 },
-  //   ];
-
-  //   setProducts(fakeProducts);
-  // }, []);
-
-  //JSON-Server verwenden, um Testdaten lokal bereitzustellen:
+  //JSON-Server verwenden, um Daten lokal bereitzustellen:
   // 1. npm install json-server
   // 2. Erstelle eine db.json und füge Produkte hinzu
   // 3. Skript hinzufügen: "json-server": "json-server --watch db.json --port 5000"
   // 3. Starte den Server: npm run json-server
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/products")
-      .then((response) => {
-        // Überprüfen, ob die Antwort die erwartete Struktur hat
-        if (Array.isArray(response.data)) {
-          setProducts(response.data);
-        } else {
-          console.error(
-            "Erwartete Array-Antwort von der API, aber erhalten:",
-            response.data
-          );
+    // Prüfen, ob wir uns im Entwicklungsmodus befinden
+    if (process.env.NODE_ENV === "development") {
+      // Verwende lokale Daten von json-server
+      axios
+        .get("http://localhost:5000/products")
+        .then((response) => {
+          if (Array.isArray(response.data)) {
+            setProducts(response.data);
+          } else {
+            console.error(
+              "Erwartete Array-Antwort von der API, aber erhalten:",
+              response.data
+            );
+            setProducts([]);
+          }
+        })
+        .catch((error) => {
+          console.error("Fehler beim Abrufen der Produkte:", error);
           setProducts([]);
-        }
-      })
-      .catch((error) => {
-        console.error("Fehler beim Abrufen der Produkte:", error);
-        setProducts([]);
-      });
+        });
+    } else {
+      // Produktion: Verwende statische Daten
+      setProducts(staticProducts);
+    }
   }, []);
-
-  // API-Aufruf für Produktdaten (vorerst statisch)
-  // useEffect(() => {
-  //   axios
-  //     .get("/api/products")
-  //     .then((response) => setProducts(response.data))
-  //     .catch((err) => {
-  //       console.error(err);
-  //       setProducts([]); // Fehlerfall abfangen und auf leeres Array setzen
-  //     });
-  // }, []);
 
   return (
     <div className="p-8">
