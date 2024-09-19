@@ -3,6 +3,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
+const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
+// console.log("PAYPAL_CLIENT_ID", PAYPAL_CLIENT_ID);
+
+
 const Checkout = () => {
   const { cart, clearCart, decreaseQuantity, addToCart } = useCartStore();
   const navigate = useNavigate();
@@ -29,7 +33,6 @@ const Checkout = () => {
 
       const orderID = data.orderID;
       console.log("Bestellung erfolgreich, Order ID:", orderID);
-      
 
       // Warte auf die Bestätigung der Bestellung und erhalte die Zahlungsdetails
       const details = await actions.order.capture();
@@ -104,8 +107,7 @@ const Checkout = () => {
           <div className="mt-8">
             <PayPalScriptProvider
               options={{
-                "client-id":
-                  "AT1l4n1JNcikOiVAklvl03qFAcbSkndCSFXtIzVivzCCev5A5P51F803LnWIdswCkf24vQz_E0N-8xUm",
+                "client-id": PAYPAL_CLIENT_ID ,
               }} // Ersetze mit deinem PayPal Client ID
             >
               <PayPalButtons

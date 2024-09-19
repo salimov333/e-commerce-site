@@ -34,6 +34,16 @@ Eine moderne, kleine E-Commerce-Website, entwickelt mit React.js und Vite. Diese
    cd e-commerce-site
    ```
 
+## Umgebungsvariablen
+
+Um die Anwendung lokal auszuführen, erstelle eine `.env`-Datei im Root-Verzeichnis des Projekts. Verwende dazu die `sample.env`-Datei als Vorlage:
+
+1. Erstelle eine Kopie von `sample.env` und benenne sie in `.env` um:
+
+```bash
+    cp sample.env .env
+```
+
 2. **Abhängigkeiten installieren:**
 
    ```bash
