@@ -6,7 +6,6 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
 // console.log("PAYPAL_CLIENT_ID", PAYPAL_CLIENT_ID);
 
-
 const Checkout = () => {
   const { cart, clearCart, decreaseQuantity, addToCart } = useCartStore();
   const navigate = useNavigate();
@@ -57,7 +56,7 @@ const Checkout = () => {
   };
 
   return (
-    <div className="p-8">
+    <div className="m-auto p-8 max-w-3xl">
       <h1 className="text-3xl font-bold mb-8">Checkout</h1>
       {cart.length > 0 ? (
         <div>
@@ -77,13 +76,13 @@ const Checkout = () => {
                 <div className="">
                   <button
                     onClick={() => decreaseQuantity(product.id)}
-                    className="bg-red-500 text-white px-4 py-1 rounded mr-2 hover:bg-red-700"
+                    className="bg-red-500 text-white px-3 py-1 rounded mr-2 hover:bg-red-700"
                   >
                     -
                   </button>
                   <button
                     onClick={() => addToCart(product)}
-                    className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-700"
+                    className="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-700"
                   >
                     +
                   </button>
@@ -93,7 +92,7 @@ const Checkout = () => {
           </ul>
 
           {/* Anzeige der Gesamtsumme */}
-          <div className="mt-8">
+          <div className="mt-8 text-center">
             <p className="text-xl font-semibold">
               Gesamtsumme:{" "}
               <strong className="text-2xl text-amber-600">
@@ -104,10 +103,10 @@ const Checkout = () => {
           </div>
 
           {/* PayPal-Integration */}
-          <div className="mt-8">
+          <div className="mt-8 max-w-xl mx-auto ">
             <PayPalScriptProvider
               options={{
-                "client-id": PAYPAL_CLIENT_ID ,
+                "client-id": PAYPAL_CLIENT_ID,
               }} // Ersetze mit deinem PayPal Client ID
             >
               <PayPalButtons

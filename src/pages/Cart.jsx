@@ -6,7 +6,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="p-8 m-2">
+    <div className="p-8 mx-auto max-w-3xl">
       <h1 className="text-3xl font-bold mb-8">Warenkorb</h1>
       {cart.length > 0 ? (
         <div className="">
