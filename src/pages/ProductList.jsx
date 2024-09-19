@@ -9,7 +9,7 @@ const staticProducts = [
   { id: 3, name: "Produkt 3", price: 20 },
   { id: 4, name: "Produkt 4", price: 30 },
   { id: 5, name: "Produkt 5", price: 35 },
-  { id: 6, name: "Produkt 6", price: 50 },
+  { id: 6, name: "Produkt 6", price: 0.01 },
 ];
 
 const ProductList = () => {
